@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Behaviour on the $32$ claims that are true \emph{only vacuously} (a universal statement whose qualifying clause has no model in the declared box). All of them are decided correctly by the rungs that answer them, but only the rungs that record vacuity as a first-class outcome actually \emph{warn}. A pipeline that reports ``true'' without the warning has reported a fact that is true of no object.}
+\label{tab:vacuity}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Pipeline & $n$ & Answered & Vacuity warned & Correct \\
+\midrule
+gen\_only & 32 & 32 & 0 & 32 \\
+verify & 32 & 32 & 0 & 32 \\
+verify+lexical\_anchors & 32 & 0 & 0 & 0 \\
+verify+typed\_anchors & 32 & 0 & 0 & 0 \\
+typed\_anchored & 32 & 13 & 13 & 13 \\
+typed\_best\_effort & 32 & 32 & 32 & 32 \\
+oracle & 32 & 32 & 32 & 32 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, bar width=7pt, width=\linewidth, height=5.6cm,
+  ylabel={Detection recall}, ymin=0, ymax=1.05,
+  xlabel={Semantic-reduction failure class},
+  symbolic x coords={P1,P2,P3,P4,P5}, xtick=data,
+  enlarge x limits=0.16, ymajorgrids, grid style={draw=black!12},
+  legend style={at={(0.5,-0.30)}, anchor=north, legend columns=3, font=\small, draw=none},
+]
+\addplot[fill=black!35, draw=black!55] coordinates {(P1,0.000) (P2,0.000) (P3,0.000) (P4,0.000) (P5,0.000)};
+\addlegendentry{IR verification only}
+\addplot[fill=blue!45, draw=blue!65] coordinates {(P1,1.000) (P2,0.500) (P3,1.000) (P4,1.000) (P5,1.000)};
+\addlegendentry{A-lex (round-trip)}
+\addplot[fill=teal!55, draw=teal!75] coordinates {(P1,0.775) (P2,0.725) (P3,0.867) (P4,1.000) (P5,0.906)};
+\addlegendentry{A-type (typed)}
+\end{axis}
+\end{tikzpicture}

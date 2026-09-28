@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Behaviour on a prevalence-controlled corpus: every base instance plus $20\%$ of the perturbed ones. Unlike Table~\ref{tab:critical} this is not balanced, so the absolute silent error rates are the ones a deployment of this shape would face.}
+\label{tab:mixed}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Pipeline & $n$ & Coverage & Acc.\,$\mid$\,ans. & Silent err. & Cert. rate \\
+\midrule
+gen\_only & 238 & 100.0 & 44.1 & 55.9 & 0.0 \\
+verify & 238 & 100.0 & 44.1 & 55.9 & 100.0 \\
+verify+lexical\_anchors & 238 & 21.4 & 60.8 & 8.4 & 21.4 \\
+verify+typed\_anchors & 238 & 11.8 & 100.0 & 0.0 & 11.8 \\
+typed\_anchored & 238 & 48.7 & 100.0 & 0.0 & 48.7 \\
+typed\_best\_effort & 238 & 96.6 & 100.0 & 0.0 & 48.7 \\
+oracle & 238 & 100.0 & 100.0 & 0.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

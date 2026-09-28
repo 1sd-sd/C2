@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering
+\caption{Mechanisms as detectors of \emph{unfaithful reductions} -- an IR that differs from the reference IR of the sentence, whether or not the answer happened to be right. \emph{Recall} counts violations of an anchor (genuine detection); \emph{safety} counts unfaithful reductions whose answer was withheld for any reason; \emph{over-abstention} is the price, i.e.\ the share of faithful reductions refused certification. IR verification alone has recall $0$ by Proposition~\ref{prop:blind}.}
+\label{tab:detectors}
+\small
+\begin{tabular}{llrrrrr}
+\toprule
+Mechanism & Scope & $n_{\text{unf.}}$ & Recall & Safety & $n_{\text{fai.}}$ & Over-abst. \\
+\midrule
+IR verification alone & all & 244 & 0.0 & 0.0 & 220 & 0.0 \\
+A-lex (round-trip) & all & 244 & 91.8 & 91.8 & 220 & 39.1 \\
+A-type (typed) & all & 244 & 86.1 & 100.0 & 220 & 48.2 \\
+\midrule
+A-lex (round-trip) & P1 & 40 & 100.0 & 100.0 & 40 & 35.0 \\
+A-type (typed) & P1 & 40 & 77.5 & 100.0 & 40 & 45.0 \\
+A-lex (round-trip) & P2 & 40 & 50.0 & 50.0 & 40 & 50.0 \\
+A-type (typed) & P2 & 40 & 72.5 & 100.0 & 40 & 32.5 \\
+A-lex (round-trip) & P3 & 60 & 100.0 & 100.0 & 20 & 35.0 \\
+A-type (typed) & P3 & 60 & 86.7 & 100.0 & 20 & 50.0 \\
+A-lex (round-trip) & P4 & 40 & 100.0 & 100.0 & 40 & 42.5 \\
+A-type (typed) & P4 & 40 & 100.0 & 100.0 & 40 & 57.5 \\
+A-lex (round-trip) & P5 & 64 & 100.0 & 100.0 & 0 & 0.0 \\
+A-type (typed) & P5 & 64 & 90.6 & 100.0 & 0 & 0.0 \\
+A-lex (round-trip) & benign & 0 & 0.0 & 0.0 & 80 & 35.0 \\
+A-type (typed) & benign & 0 & 0.0 & 0.0 & 80 & 52.5 \\
+\bottomrule
+\end{tabular}
+\end{table}

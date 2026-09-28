@@ -1,0 +1,25 @@
+# Runtime dependencies
+#
+# The study itself (experiments/run_experiment.py and the ai4math_reliability
+# package) uses ONLY the Python standard library -- there is nothing to install:
+#
+#     fractions, itertools, dataclasses, random, json, argparse, pathlib, re, math, enum, typing
+#
+# The two entries below are needed only by the auxiliary PDF-text extraction
+# script (scripts/extract_pdf.py), which reads the reference lecture notes under
+# materials/. They are not required to reproduce any result in the paper.
+#
+# Install (any of):
+#     python -m pip install -r requirements.txt
+#
+# PDF text extraction (scripts/extract_pdf.py)
+pypdf>=4.0.0
+pdfminer.six>=20231228
+
+# LaTeX toolchain (not a pip package -- documented here for completeness):
+#   The paper compiles with any standard LaTeX distribution:
+#       pdflatex paper && bibtex paper && pdflatex paper && pdflatex paper
+#   This submission used Tectonic 0.17.0 (single-file, no installer):
+#       tectonic -X compile paper.tex --outdir .
+#   Packages used: amsmath, amssymb, amsthm, booktabs, graphicx, pgfplots,
+#                  geometry, hyperref, natbib (bibliographystyle: plainnat)

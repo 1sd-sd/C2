@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Behaviour on semantics-changing tasks (base + perturbed members of every critical pair). Coverage is the fraction answered; silent error rate counts wrong answers that were emitted as if certified; certificate rate is the fraction carrying a machine-checkable object.}
+\label{tab:critical}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Pipeline & $n$ & Coverage & Acc.\,$\mid$\,ans. & Silent err. & Cert. rate \\
+\midrule
+gen\_only & 384 & 100.0 & 50.0 & 50.0 & 0.0 \\
+verify & 384 & 100.0 & 50.0 & 50.0 & 100.0 \\
+verify+lexical\_anchors & 384 & 26.6 & 80.4 & 5.2 & 26.6 \\
+verify+typed\_anchors & 384 & 19.8 & 100.0 & 0.0 & 19.8 \\
+typed\_anchored & 384 & 50.5 & 100.0 & 0.0 & 50.5 \\
+typed\_best\_effort & 384 & 97.9 & 100.0 & 0.0 & 50.5 \\
+oracle & 384 & 100.0 & 100.0 & 0.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

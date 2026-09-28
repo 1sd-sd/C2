@@ -1,0 +1,806 @@
+{
+  "seed": 20260928,
+  "n_per_class": 40,
+  "counts": {
+    "critical_pairs": 192,
+    "benign_pairs": 40,
+    "critical_instances": 384,
+    "benign_instances": 80,
+    "per_class": {
+      "P1_quantifier_drift": 40,
+      "P2_domain_kind_drift": 40,
+      "P3_strictness_drift": 40,
+      "P4_assumption_omission": 40,
+      "P5_vacuity": 32
+    }
+  },
+  "blind_spot_invariance": {
+    "pairs": 192,
+    "identical_ir_fraction": 1.0,
+    "identical_verdict_fraction": 1.0
+  },
+  "pipelines_critical": {
+    "gen_only": {
+      "name": "gen_only",
+      "total": 384,
+      "answered": 384,
+      "correct": 192,
+      "certified": 0,
+      "coverage": 1.0,
+      "accuracy_answered": 0.5,
+      "accuracy_overall": 0.5,
+      "silent_error_rate": 0.5,
+      "certificate_rate": 0.0
+    },
+    "verify": {
+      "name": "verify",
+      "total": 384,
+      "answered": 384,
+      "correct": 192,
+      "certified": 384,
+      "coverage": 1.0,
+      "accuracy_answered": 0.5,
+      "accuracy_overall": 0.5,
+      "silent_error_rate": 0.5,
+      "certificate_rate": 1.0
+    },
+    "verify+lexical_anchors": {
+      "name": "verify+lexical_anchors",
+      "total": 384,
+      "answered": 102,
+      "correct": 82,
+      "certified": 102,
+      "coverage": 0.265625,
+      "accuracy_answered": 0.803922,
+      "accuracy_overall": 0.213542,
+      "silent_error_rate": 0.052083,
+      "certificate_rate": 0.265625
+    },
+    "verify+typed_anchors": {
+      "name": "verify+typed_anchors",
+      "total": 384,
+      "answered": 76,
+      "correct": 76,
+      "certified": 76,
+      "coverage": 0.197917,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.197917,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.197917
+    },
+    "typed_anchored": {
+      "name": "typed_anchored",
+      "total": 384,
+      "answered": 194,
+      "correct": 194,
+      "certified": 194,
+      "coverage": 0.505208,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.505208,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.505208
+    },
+    "typed_best_effort": {
+      "name": "typed_best_effort",
+      "total": 384,
+      "answered": 376,
+      "correct": 376,
+      "certified": 194,
+      "coverage": 0.979167,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.979167,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.505208
+    },
+    "oracle": {
+      "name": "oracle",
+      "total": 384,
+      "answered": 384,
+      "correct": 384,
+      "certified": 384,
+      "coverage": 1.0,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 1.0,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 1.0
+    }
+  },
+  "pipelines_mixed": {
+    "gen_only": {
+      "name": "gen_only",
+      "total": 238,
+      "answered": 238,
+      "correct": 105,
+      "certified": 0,
+      "coverage": 1.0,
+      "accuracy_answered": 0.441176,
+      "accuracy_overall": 0.441176,
+      "silent_error_rate": 0.558824,
+      "certificate_rate": 0.0
+    },
+    "verify": {
+      "name": "verify",
+      "total": 238,
+      "answered": 238,
+      "correct": 105,
+      "certified": 238,
+      "coverage": 1.0,
+      "accuracy_answered": 0.441176,
+      "accuracy_overall": 0.441176,
+      "silent_error_rate": 0.558824,
+      "certificate_rate": 1.0
+    },
+    "verify+lexical_anchors": {
+      "name": "verify+lexical_anchors",
+      "total": 238,
+      "answered": 51,
+      "correct": 31,
+      "certified": 51,
+      "coverage": 0.214286,
+      "accuracy_answered": 0.607843,
+      "accuracy_overall": 0.130252,
+      "silent_error_rate": 0.084034,
+      "certificate_rate": 0.214286
+    },
+    "verify+typed_anchors": {
+      "name": "verify+typed_anchors",
+      "total": 238,
+      "answered": 28,
+      "correct": 28,
+      "certified": 28,
+      "coverage": 0.117647,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.117647,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.117647
+    },
+    "typed_anchored": {
+      "name": "typed_anchored",
+      "total": 238,
+      "answered": 116,
+      "correct": 116,
+      "certified": 116,
+      "coverage": 0.487395,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.487395,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.487395
+    },
+    "typed_best_effort": {
+      "name": "typed_best_effort",
+      "total": 238,
+      "answered": 230,
+      "correct": 230,
+      "certified": 116,
+      "coverage": 0.966387,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.966387,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.487395
+    },
+    "oracle": {
+      "name": "oracle",
+      "total": 238,
+      "answered": 238,
+      "correct": 238,
+      "certified": 238,
+      "coverage": 1.0,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 1.0,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 1.0
+    }
+  },
+  "pipelines_benign": {
+    "gen_only": {
+      "name": "gen_only",
+      "total": 80,
+      "answered": 80,
+      "correct": 80,
+      "certified": 0,
+      "coverage": 1.0,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 1.0,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.0
+    },
+    "verify": {
+      "name": "verify",
+      "total": 80,
+      "answered": 80,
+      "correct": 80,
+      "certified": 80,
+      "coverage": 1.0,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 1.0,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 1.0
+    },
+    "verify+lexical_anchors": {
+      "name": "verify+lexical_anchors",
+      "total": 80,
+      "answered": 52,
+      "correct": 52,
+      "certified": 52,
+      "coverage": 0.65,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.65,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.65
+    },
+    "verify+typed_anchors": {
+      "name": "verify+typed_anchors",
+      "total": 80,
+      "answered": 38,
+      "correct": 38,
+      "certified": 38,
+      "coverage": 0.475,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.475,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.475
+    },
+    "typed_anchored": {
+      "name": "typed_anchored",
+      "total": 80,
+      "answered": 38,
+      "correct": 38,
+      "certified": 38,
+      "coverage": 0.475,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 0.475,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.475
+    },
+    "typed_best_effort": {
+      "name": "typed_best_effort",
+      "total": 80,
+      "answered": 80,
+      "correct": 80,
+      "certified": 38,
+      "coverage": 1.0,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 1.0,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 0.475
+    },
+    "oracle": {
+      "name": "oracle",
+      "total": 80,
+      "answered": 80,
+      "correct": 80,
+      "certified": 80,
+      "coverage": 1.0,
+      "accuracy_answered": 1.0,
+      "accuracy_overall": 1.0,
+      "silent_error_rate": 0.0,
+      "certificate_rate": 1.0
+    }
+  },
+  "detectors_overall": {
+    "verify+lexical_anchors": {
+      "name": "verify+lexical_anchors",
+      "unfaithful": 244,
+      "violations": 224,
+      "withheld_unfaithful": 224,
+      "faithful": 220,
+      "withheld_faithful": 86,
+      "recall": 0.918033,
+      "safety": 0.918033,
+      "over_abstention": 0.390909
+    },
+    "verify+typed_anchors": {
+      "name": "verify+typed_anchors",
+      "unfaithful": 244,
+      "violations": 210,
+      "withheld_unfaithful": 244,
+      "faithful": 220,
+      "withheld_faithful": 106,
+      "recall": 0.860656,
+      "safety": 1.0,
+      "over_abstention": 0.481818
+    },
+    "ir_verification_only": {
+      "name": "ir_verification_only",
+      "unfaithful": 244,
+      "violations": 0,
+      "withheld_unfaithful": 0,
+      "faithful": 220,
+      "withheld_faithful": 0,
+      "recall": 0.0,
+      "safety": 0.0,
+      "over_abstention": 0.0
+    }
+  },
+  "detectors_per_class": {
+    "P1_quantifier_drift": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 14,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.35
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 40,
+        "violations": 31,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 18,
+        "recall": 0.775,
+        "safety": 1.0,
+        "over_abstention": 0.45
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P2_domain_kind_drift": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 40,
+        "violations": 20,
+        "withheld_unfaithful": 20,
+        "faithful": 40,
+        "withheld_faithful": 20,
+        "recall": 0.5,
+        "safety": 0.5,
+        "over_abstention": 0.5
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 40,
+        "violations": 29,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 13,
+        "recall": 0.725,
+        "safety": 1.0,
+        "over_abstention": 0.325
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P3_strictness_drift": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 60,
+        "violations": 60,
+        "withheld_unfaithful": 60,
+        "faithful": 20,
+        "withheld_faithful": 7,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.35
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 60,
+        "violations": 52,
+        "withheld_unfaithful": 60,
+        "faithful": 20,
+        "withheld_faithful": 10,
+        "recall": 0.866667,
+        "safety": 1.0,
+        "over_abstention": 0.5
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 60,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 20,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P4_assumption_omission": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 17,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.425
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 23,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.575
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P5_vacuity": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 64,
+        "violations": 64,
+        "withheld_unfaithful": 64,
+        "faithful": 0,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 64,
+        "violations": 58,
+        "withheld_unfaithful": 64,
+        "faithful": 0,
+        "withheld_faithful": 0,
+        "recall": 0.90625,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 64,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 0,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "benign": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 0,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 80,
+        "withheld_faithful": 28,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.35
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 0,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 80,
+        "withheld_faithful": 42,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.525
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 0,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 80,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    }
+  },
+  "vacuity": {
+    "gen_only": {
+      "n": 32,
+      "answered": 32,
+      "warned": 0,
+      "correct": 32
+    },
+    "verify": {
+      "n": 32,
+      "answered": 32,
+      "warned": 0,
+      "correct": 32
+    },
+    "verify+lexical_anchors": {
+      "n": 32,
+      "answered": 0,
+      "warned": 0,
+      "correct": 0
+    },
+    "verify+typed_anchors": {
+      "n": 32,
+      "answered": 0,
+      "warned": 0,
+      "correct": 0
+    },
+    "typed_anchored": {
+      "n": 32,
+      "answered": 13,
+      "warned": 13,
+      "correct": 13
+    },
+    "typed_best_effort": {
+      "n": 32,
+      "answered": 32,
+      "warned": 32,
+      "correct": 32
+    },
+    "oracle": {
+      "n": 32,
+      "answered": 32,
+      "warned": 32,
+      "correct": 32
+    }
+  },
+  "lexicon_sensitivity": [
+    {
+      "prior": 0.5,
+      "lexical_recall": 0.9631147540983607,
+      "lexical_over_abstention": 0.7428571428571429,
+      "typed_recall": 0.7336065573770492,
+      "typed_over_abstention": 0.8071428571428572
+    },
+    {
+      "prior": 0.75,
+      "lexical_recall": 0.9180327868852459,
+      "lexical_over_abstention": 0.4142857142857143,
+      "typed_recall": 0.860655737704918,
+      "typed_over_abstention": 0.45714285714285713
+    },
+    {
+      "prior": 1.0,
+      "lexical_recall": 0.8360655737704918,
+      "lexical_over_abstention": 0.0,
+      "typed_recall": 1.0,
+      "typed_over_abstention": 0.0
+    }
+  ],
+  "detectors_canonical_overall": {
+    "verify+lexical_anchors": {
+      "name": "verify+lexical_anchors",
+      "unfaithful": 244,
+      "violations": 204,
+      "withheld_unfaithful": 204,
+      "faithful": 140,
+      "withheld_faithful": 0,
+      "recall": 0.836066,
+      "safety": 0.836066,
+      "over_abstention": 0.0
+    },
+    "verify+typed_anchors": {
+      "name": "verify+typed_anchors",
+      "unfaithful": 244,
+      "violations": 244,
+      "withheld_unfaithful": 244,
+      "faithful": 140,
+      "withheld_faithful": 0,
+      "recall": 1.0,
+      "safety": 1.0,
+      "over_abstention": 0.0
+    },
+    "ir_verification_only": {
+      "name": "ir_verification_only",
+      "unfaithful": 244,
+      "violations": 0,
+      "withheld_unfaithful": 0,
+      "faithful": 140,
+      "withheld_faithful": 0,
+      "recall": 0.0,
+      "safety": 0.0,
+      "over_abstention": 0.0
+    }
+  },
+  "detectors_canonical_per_class": {
+    "P1_quantifier_drift": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P2_domain_kind_drift": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P3_strictness_drift": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 60,
+        "violations": 60,
+        "withheld_unfaithful": 60,
+        "faithful": 20,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 60,
+        "violations": 60,
+        "withheld_unfaithful": 60,
+        "faithful": 20,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 60,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 20,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P4_assumption_omission": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 40,
+        "violations": 40,
+        "withheld_unfaithful": 40,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 40,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 40,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    },
+    "P5_vacuity": {
+      "verify+lexical_anchors": {
+        "name": "verify+lexical_anchors",
+        "unfaithful": 64,
+        "violations": 64,
+        "withheld_unfaithful": 64,
+        "faithful": 0,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "verify+typed_anchors": {
+        "name": "verify+typed_anchors",
+        "unfaithful": 64,
+        "violations": 64,
+        "withheld_unfaithful": 64,
+        "faithful": 0,
+        "withheld_faithful": 0,
+        "recall": 1.0,
+        "safety": 1.0,
+        "over_abstention": 0.0
+      },
+      "ir_verification_only": {
+        "name": "ir_verification_only",
+        "unfaithful": 64,
+        "violations": 0,
+        "withheld_unfaithful": 0,
+        "faithful": 0,
+        "withheld_faithful": 0,
+        "recall": 0.0,
+        "safety": 0.0,
+        "over_abstention": 0.0
+      }
+    }
+  }
+}
